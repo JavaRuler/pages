@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>图表分析</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/plugins/chartist/chartist.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/dayspring.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element clearfix"> 
+	                    	<span class="pull-left">
+	                            <img alt="image" class="img-circle" width="100px" src="img/logo.png" />
+	                        </span>
+	                        <span class="pull-right text-white m-t-lg	">上海市医疗<br />器械检测所</span>
+	                    </div>
+                        <div class="logo-element">
+                            CMTC
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-bank"></i> <span class="nav-label">首页</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="index_controller.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">图表分析</span></a>
+                    </li>
+                    <li>
+                        <a href="layouts.html"><i class="fa fa-th-large"></i> <span class="nav-label">业务受理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="business_panel.html">业务一览</a></li>
+                            <li><a href="layouts.html">新增合同</a></li>
+                            <li><a href="contract_panel.html">预报价</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="business_panel.html"><i class="fa fa-flask"></i> <span class="nav-label">实验室管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="task_allocation.html">检测任务一览</a></li>
+                        <li><a href="detailed_scheme.html">方案设计</a></li>
+                        <li><a href="data_entry.html">数据录入</a></li>
+                        <li><a href="report_production.html">报告制作</a></li>
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">模块四 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="#">功能一 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">列表一</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">列表二</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">列表三</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">功能二</a></li>
+                            <li><a href="#">功能三</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <!--<form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="搜索..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>-->
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎来到医疗系统</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时 以前</small>
+                                            <strong>张三</strong> 要 <strong>改Bug1</strong>. <br>
+                                            <small class="text-muted">3 天 以前 在 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5小时 以前</small>
+                                            <strong>李四</strong> 要 <strong>改Bug2</strong>. <br>
+                                            <small class="text-muted">昨天 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>查看所有信息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 你有 16 条信息
+                                            <span class="pull-right text-muted small">4 分钟以前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> 服务器重启
+                                            <span class="pull-right text-muted small">4 分钟以前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有警示</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+	                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+	                            <span class="clear"> <span class="block m-t-xs">
+	                            	<strong class="font-bold">张三</strong>
+	                            	<b class="caret"></b>
+	                            </span> 
+	                            </span>
+	                        </a>
+	                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+	                            <li><a href="#">个人信息</a></li>
+	                            <li><a href="#">邮箱</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="login.html">退出</a></li>
+	                        </ul>
+	                    </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-10">
+                    <h2>图表分析</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li class="active">
+                            <strong>图表分析</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;工作统计</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="lineChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;工作统计</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="barChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="height: 444px">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;工作统计</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <!--<canvas id="polarChart" height="140"></canvas>-->
+                                    <div id="ct-chart4" class="ct-perfect-fourth" style="height: 355px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;工作统计</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="doughnutChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Line Chart Example
+                                    <small>With custom colors.</small>
+                                </h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="lineChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Bar Chart Example</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="barChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Polar Area</h5>
+
+                            </div>
+                            <div class="ibox-content">
+                                <div class="text-center">
+                                    <canvas id="polarChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Pie </h5>
+
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="doughnutChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="footer" >
+                <div>
+                    <strong>Copyright</strong> Example Company &copy; 2014-2017
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Chartist -->
+    <script src="js/plugins/chartist/chartist.min.js"></script>
+
+    <script>
+        $(function () {
+
+            var lineData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+
+                    {
+                        label: "Data 1",
+                        backgroundColor: 'rgba(26,179,148,0.5)',
+                        borderColor: "rgba(26,179,148,0.7)",
+                        pointBackgroundColor: "rgba(26,179,148,1)",
+                        pointBorderColor: "#fff",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    },{
+                        label: "Data 2",
+                        backgroundColor: 'rgba(220, 220, 220, 0.5)',
+                        pointBorderColor: "#fff",
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    }
+                ]
+            };
+
+            var lineOptions = {
+                responsive: true
+            };
+
+
+            var ctx = document.getElementById("lineChart").getContext("2d");
+            new Chart(ctx, {type: 'line', data: lineData, options:lineOptions});
+
+            var barData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "Data 1",
+                        backgroundColor: 'rgba(220, 220, 220, 0.5)',
+                        pointBorderColor: "#fff",
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "Data 2",
+                        backgroundColor: 'rgba(26,179,148,0.5)',
+                        borderColor: "rgba(26,179,148,0.7)",
+                        pointBackgroundColor: "rgba(26,179,148,1)",
+                        pointBorderColor: "#fff",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            };
+
+            var barOptions = {
+                responsive: true
+            };
+
+
+            var ctx2 = document.getElementById("barChart").getContext("2d");
+            new Chart(ctx2, {type: 'bar', data: barData, options:barOptions});
+
+           /* var polarData = {
+                datasets: [{
+                    data: [
+                        300,140,200
+                    ],
+                    backgroundColor: [
+                        "#a3e1d4", "#dedede", "#b5b8cf"
+                    ],
+                    label: [
+                        "My Radar chart"
+                    ]
+                }],
+                labels: [
+                    "App","Software","Laptop"
+                ]
+            };
+
+            var polarOptions = {
+                segmentStrokeWidth: 2,
+                responsive: true
+
+            };
+
+            var ctx3 = document.getElementById("polarChart").getContext("2d");
+            new Chart(ctx3, {type: 'polarArea', data: polarData, options:polarOptions});*/
+
+            var doughnutData = {
+                labels: ["App","Software","Laptop" ],
+                datasets: [{
+                    data: [300,50,100],
+                    backgroundColor: ["#a3e1d4","#dedede","#b5b8cf"]
+                }]
+            } ;
+
+
+            var doughnutOptions = {
+                responsive: true
+            };
+
+
+            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+            new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+
+            new Chartist.Bar('#ct-chart4', {
+                labels: ['1', '2', '3', '4', '5', '6', '7'],
+                series: [
+                    [5, 4, 3, 7, 5, 10, 3],
+                    [3, 2, 9, 5, 4, 6, 4]
+                ]
+            }, {
+                seriesBarDistance: 10,
+                reverseData: true,
+                horizontalBars: true,
+                axisY: {
+                    offset: 20
+                },
+                axisX: {
+                    offset:40
+                }
+            });
+
+        });
+
+    </script>
+</body>
+</html>

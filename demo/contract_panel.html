@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>模块三</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/dayspring.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element clearfix"> 
+                    	<span class="pull-left">
+                            <img alt="image" class="img-circle" width="100px" src="img/logo.png" />
+                        </span>
+                        <span class="pull-right text-white m-t-lg	">上海市医疗<br />器械检测所</span>
+                    </div>
+                    <div class="logo-element">
+                        CMTC
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa fa-bank"></i> <span class="nav-label">首页</span></a>
+                </li>
+                <li>
+                    <a href="index_controller.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">图表分析</span></a>
+                </li>
+                <li class="active">
+                    <a href="layouts.html"><i class="fa fa-th-large"></i> <span class="nav-label">业务受理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="business_panel.html">业务一览</a></li>
+                        <li><a href="layouts.html">新增合同</a></li>
+                        <li class="active"><a href="contract_panel.html">预报价</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business_panel.html"><i class="fa fa-flask"></i> <span class="nav-label">实验室管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="task_allocation.html">检测任务一览</a></li>
+                        <li><a href="detailed_scheme.html">方案设计</a></li>
+                        <li><a href="data_entry.html">数据录入</a></li>
+                        <li><a href="report_production.html">报告制作</a></li>
+                    </ul>
+                </li>
+                <!--<li>
+                    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">模块四 </span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="#">功能一 <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="#">列表一</a>
+                                </li>
+                                <li>
+                                    <a href="#">列表二</a>
+                                </li>
+                                <li>
+                                    <a href="#">列表三</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">功能二</a></li>
+                        <li><a href="#">功能三</a></li>
+                    </ul>
+                </li>-->
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <!--<form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="搜索..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>-->
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到医疗系统</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46小时 以前</small>
+                                        <strong>张三</strong> 要 <strong>改Bug1</strong>. <br>
+                                        <small class="text-muted">3 天 以前 在 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5小时 以前</small>
+                                        <strong>李四</strong> 要 <strong>改Bug2</strong>. <br>
+                                        <small class="text-muted">昨天 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>查看所有信息</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> 你有 16 条信息
+                                        <span class="pull-right text-muted small">4 分钟以前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> 服务器重启
+                                        <span class="pull-right text-muted small">4 分钟以前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>查看所有警示</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs">
+                            	<strong class="font-bold">张三</strong>
+                            	<b class="caret"></b>
+                            </span> 
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#">个人信息</a></li>
+                            <li><a href="#">邮箱</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-sm-10">
+                <h2>预报价</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a>业务受理</a>
+                    </li>
+                    <li class="active">
+                        <strong>预报价</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <form id="">
+                <div class="row">
+                    <!--<div class="col-sm-12">
+                        <div class="ibox">
+                            <div class="ibox-content p-md">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label">预报价：5000</label>
+                                        </div>
+                                    </div>
+                                    &lt;!&ndash;<div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-success"><i class="fa fa-calculator"></i>&nbsp;计算预报价</button>
+                                            <button type="button" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;保存</button>
+                                        </div>
+                                    </div>&ndash;&gt;
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;检测内容</h5>
+                                <div class="ibox-tools">
+                                    <a class="fullscreen-link" >
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <div class="table-responsive table-margin-top table-scroll" >
+                                                <table class="table table-striped table-bordered table-hover datatable-scroll" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 20%;">名称</th>
+                                                            <th style="width: 10%;">标准</th>
+                                                            <th style="width: 20%;">科室</th>
+                                                            <th style="width: 10%;">所属分包</th>
+                                                            <th style="width: 10%;">单位</th>
+                                                            <th style="width: 10%;" class="number">数量</th>
+                                                            <th style="width: 10%;">备注</th>
+                                                            <th style="width: 10%;"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td title="表面粗糙度">表面粗糙度</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="表面活性物">表面活性物</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="剥离力">剥离力</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="表面粗糙度">表面粗糙度</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="表面活性物">表面活性物</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="tabs-container">
+                                                <div class="tabs-right">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a data-toggle="tab" href="#tab-1">无源</a></li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-2">有源</a></li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-3">EMC</a></li>
+                                                    </ul>
+                                                    <div class="tab-content ">
+                                                        <div id="tab-1" class="tab-pane active">
+                                                            <div class="panel-body no-padding">
+                                                                <div class="row row-responsive no-margin-left">
+                                                                    <div class="col-sm-12 no-padding-left">
+                                                                        <input type="text" class="form-control input-search" placeholder="搜索">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive table-scroll" >
+                                                                    <table class="table table-striped table-bordered table-hover table-paging no-margin-top" cellspacing="0" width="100%">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th style="width: 12%;"></th>
+                                                                            <th style="width: 30%;">名称</th>
+                                                                            <th style="width: 18%;">标准</th>
+                                                                            <th style="width: 10%;">单位</th>
+                                                                            <th style="width: 30%;">备注</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="手术刀片">手术刀片</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="次">次</td>
+                                                                            <td title=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="线带针">线带针</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="线带针">线带针</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-2" class="tab-pane">
+                                                            <div class="panel-body no-padding">
+                                                                <div class="row row-responsive no-margin-left">
+                                                                    <div class="col-sm-12 no-padding-left">
+                                                                        <input type="text" class="form-control input-search" placeholder="搜索">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive table-scroll" >
+                                                                    <table class="table table-striped table-bordered table-hover table-paging no-margin-top" cellspacing="0" width="100%">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th style="width: 12%;"></th>
+                                                                            <th style="width: 30%;">名称</th>
+                                                                            <th style="width: 18%;">标准</th>
+                                                                            <th style="width: 10%;">单位</th>
+                                                                            <th style="width: 30%;">备注</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="猪皮生物敷科">猪皮生物敷科</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="次">次</td>
+                                                                            <td title=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="一次性使用补液袋">一次性使用补液袋</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-3" class="tab-pane">
+                                                            <div class="panel-body no-padding">
+                                                                <div class="row row-responsive no-margin-left">
+                                                                    <div class="col-sm-12 no-padding-left">
+                                                                        <input type="text" class="form-control input-search" placeholder="搜索">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive table-scroll" >
+                                                                    <table class="table table-striped table-bordered table-hover table-paging no-margin-top" cellspacing="0" width="100%">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th style="width: 12%;"></th>
+                                                                            <th style="width: 30%;">名称</th>
+                                                                            <th style="width: 18%;">标准</th>
+                                                                            <th style="width: 10%;">单位</th>
+                                                                            <th style="width: 30%;">备注</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="白度值">白度值</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="手术刀片">手术刀片</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="次">次</td>
+                                                                            <td title=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                                            <td title="缝合线">缝合线</td>
+                                                                            <td title="Y1988">Y1988</td>
+                                                                            <td title="米">米</td>
+                                                                            <td title="检验费另算">检验费另算</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;自定义检测内容</h5>
+                                <div class="ibox-tools">
+                                    <a class="color-black" data-toggle="modal" data-target="#myModal6">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a class="fullscreen-link" >
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <div class="table-responsive table-margin-top table-scroll" >
+                                                <table class="table table-striped table-bordered table-hover datatable-scroll" cellspacing="0" width="100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th style="width: 20%;">名称</th>
+                                                        <th style="width: 10%;">标准</th>
+                                                        <th style="width: 20%;">科室</th>
+                                                        <th style="width: 10%;">单位</th>
+                                                        <th style="width: 10%;" class="number">数量</th>
+                                                        <th style="width: 10%;">备注</th>
+                                                        <th style="width: 10%;"></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td title="科室测试数据">科室测试数据</td>
+                                                        <td title="GB777">GB777</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title="次">次</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="科室自定义数据">科室自定义数据</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="手术无影灯">手术无影灯</td>
+                                                        <td title="YY0099">YY0099</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="科室测试数据">科室测试数据</td>
+                                                        <td title="GB777">GB777</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title="次">次</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="科室自定义数据">科室自定义数据</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                        <td title="移除" class="text-center"><a href="#"><i class="fa fa-arrow-circle-right"></i></a></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <!--<label class="search-top block text-right">
+                                                <input type="text" class="dsearch" placeholder="搜索">
+                                            </label>-->
+                                            <div class="row row-search">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control input-search" placeholder="搜索">
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive table-scroll" >
+                                                <table class="table table-striped table-bordered table-hover table-paging no-margin-top" cellspacing="0" width="100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th style="width: 10%;"></th>
+                                                        <th style="width: 20%;">名称</th>
+                                                        <th style="width: 10%;">标准</th>
+                                                        <th style="width: 20%;">科室</th>
+                                                        <th style="width: 10%;">所属分包</th>
+                                                        <th style="width: 10%;">单位</th>
+                                                        <th style="width: 10%;" class="number">数量</th>
+                                                        <th style="width: 10%;">备注</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                        <td title="表面粗糙度">表面粗糙度</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                        <td title="表面活性物">表面活性物</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                        <td title="剥离力">剥离力</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                        <td title="表面粗糙度">表面粗糙度</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td title="添加" class="text-center"><a href="#"><i class="fa fa-arrow-circle-left"></i></a></td>
+                                                        <td title="表面活性物">表面活性物</td>
+                                                        <td title="N/A">N/A</td>
+                                                        <td title="科室一">科室一</td>
+                                                        <td title=""></td>
+                                                        <td title="只">只</td>
+                                                        <td title="1" class="number">1</td>
+                                                        <td title=""></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="ibox">
+                            <div class="ibox-content p-md">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label">预报价：5000</label>
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-success"><i class="fa fa-calculator"></i>&nbsp;计算预报价</button>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-footer">
+                                <button type="button" class="btn btn-success"><i class="fa fa-calculator"></i>&nbsp;计算预报价</button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-close"></i>&nbsp;删除</button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print"></i>&nbsp;打印</button>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-chevron-circle-right"></i>&nbsp;提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer" >
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2017
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- start modal -->
+    <!-- 模态 -->
+    <div class="modal fade" id="myModal6">
+        <form id="birthdayForm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">添加自定义项</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <label class="control-label">名称</label>
+                                            <input type="text" placeholder="请输入名称" class="form-control" maxlength="30" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="control-label">单位</label>
+                                            <input type="text" placeholder="请输入单位" class="form-control" maxlength="30" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <label class="control-label">科室</label>
+                                            <select class="form-control" name="">
+                                                <option>科室一</option>
+                                                <option>科室二</option>
+                                                <option>科室三</option>
+                                                <option>科室四</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="control-label">标准</label>
+                                            <input type="text" placeholder="请输入标准" class="form-control" maxlength="30" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <label class="control-label">数量</label>
+                                            <input type="text" placeholder="请输入数量" class="form-control" maxlength="30" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="control-label">单价</label>
+                                            <input type="text" placeholder="请输入单价" class="form-control" maxlength="30" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label">备注</label>
+                                            <textarea placeholder="请输入备注" class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="col-sm-offset-8 col-sm-4">
+                                    <a class="btn btn-primary" id="confirm" data-dismiss="modal">添加</a>
+                                    <a class="btn btn-white" data-dismiss="modal">关闭</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="updateTime" name="updateTime" type="text" />
+        </form>
+    </div>
+    <!-- end modal -->
+
+
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+
+<script>
+    /*$(document).ready(function(){
+        $(".datatable-scroll").DataTable({
+            scrollY: "220px",
+            paging: false, // 禁止分页
+            bFilter : false,
+            bAutoWidth: false,
+            bSort: false,
+            info: false,
+            oLanguage: {
+                sEmptyTable: '表中没有可用的数据'
+            }
+        });
+
+        /!*$('.table-paging').DataTable({
+            /!*sDom: "<'row'<'col-md-6 col-sm-6'p><'col-md-6 col-sm-6'f>r>t",*!/
+            sDom: "<'row'<'col-md-6 col-sm-6'p><'col-md-6 col-sm-6'f>r>t",
+            /!*sDom: "rt<'row'<'col-sm-12'p>>",*!/
+            pageLength: 5,
+            paging: false, // 禁止分页
+            bSort: false,
+            //bFilter : false,
+            //searching: true,//本地搜索
+            scrollY: "220px",
+            bAutoWidth: false,
+            oLanguage: {
+                sSearch: "查询：",
+                sZeroRecords: "对不起，查询不到任何相关数据",
+                sEmptyTable: '表中没有可用的数据'
+            }
+        });*!/
+        $('.table-paging').DataTable({
+            scrollY: "200px",
+            scrollCollapse: true,
+            paging: false,
+
+            info: false,
+            bSort: false,
+            bAutoWidth: false,
+            oLanguage: {
+                sSearch: "查询：",
+                sZeroRecords: "对不起，查询不到任何相关数据",
+                sEmptyTable: '表中没有可用的数据'
+            }
+        });
+
+    });*/
+
+</script>
+</body>
+
+</html>

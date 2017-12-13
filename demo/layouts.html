@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>模块二</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/plugins/custom/custom.css" />
+	<link rel="stylesheet" href="css/plugins/daterangepicker/daterangepicker-bs3.css" />
+	<link rel="stylesheet" href="css/plugins/datapicker/datepicker3.css" />
+	<!-- Toastr style -->
+	<link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+	<!-- Sweet Alert -->
+	<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<link href="css/dayspring.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element clearfix"> 
+                    	<span class="pull-left">
+                            <img alt="image" class="img-circle" width="100px" src="img/logo.png" />
+                        </span>
+                        <span class="pull-right text-white m-t-lg	">上海市医疗<br />器械检测所</span>
+                    </div>
+                    <div class="logo-element">
+						CMTC
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa fa-bank"></i> <span class="nav-label">首页</span></a>
+                </li>
+				<li>
+					<a href="index_controller.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">图表分析</span></a>
+				</li>
+                <li class="active">
+                    <a href="layouts.html"><i class="fa fa-th-large"></i> <span class="nav-label">业务受理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+						<li><a href="business_panel.html">业务一览</a></li>
+                        <li class="active"><a href="layouts.html">新增合同</a></li>
+						<li><a href="contract_panel.html">预报价</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business_panel.html"><i class="fa fa-flask"></i> <span class="nav-label">实验室管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+						<li><a href="task_allocation.html">检测任务一览</a></li>
+						<li><a href="detailed_scheme.html">方案设计</a></li>
+						<li><a href="data_entry.html">数据录入</a></li>
+						<li><a href="report_production.html">报告制作</a></li>
+                    </ul>
+                </li>
+                <!--<li>
+                    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">模块四 </span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="#">功能一 <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="#">列表一</a>
+                                </li>
+                                <li>
+                                    <a href="#">列表二</a>
+                                </li>
+                                <li>
+                                    <a href="#">列表三</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">功能二</a></li>
+                        <li><a href="#">功能三</a></li>
+                    </ul>
+                </li>-->
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <!--<form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="搜索..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>-->
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到医疗系统</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46小时 以前</small>
+                                        <strong>张三</strong> 要 <strong>改Bug1</strong>. <br>
+                                        <small class="text-muted">3 天 以前 在 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5小时 以前</small>
+                                        <strong>李四</strong> 要 <strong>改Bug2</strong>. <br>
+                                        <small class="text-muted">昨天 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>查看所有信息</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> 你有 16 条信息
+                                        <span class="pull-right text-muted small">4 分钟以前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> 服务器重启
+                                        <span class="pull-right text-muted small">4 分钟以前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>查看所有警示</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs">
+                            	<strong class="font-bold">张三</strong>
+                            	<b class="caret"></b>
+                            </span> 
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#">个人信息</a></li>
+                            <li><a href="#">邮箱</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-sm-10">
+                <h2>新增合同</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a>业务受理</a>
+                    </li>
+                    <li class="active">
+                        <strong>新增合同</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <form id="">
+    			<!--基本信息-->
+	        	<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;基本信息</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+			                        <a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content">
+		                        
+		                          <div class="row">
+			                          <div class="form-group col-sm-2">
+									    <label for="email">合同编号：</label>
+									    <p class="form-control-static">2016-0012</p>
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="password">合同状态：</label>
+									    <p class="form-control-static">受理中</p>
+									  </div>
+									  
+								  </div>
+								  <div class="row">
+								  	
+									<div class="form-group col-sm-2">
+									  	<label>样品有无：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="yes">有样品</option>
+									    	<option value="no">无样品</option>
+									    </select>
+									</div>
+									  
+									<!--<div class="form-group col-sm-2 col-lg-2">
+									    <label for="exampleInputFile">生效时间：</label>
+									    <input class="form-control" type="date" id="exampleInputFile">
+									</div>-->
+									<div class="form-group col-sm-2 col-lg-2 data_1">
+		                                <label class="font-normal">生效时间：</label>
+		                                <div class="input-group date">
+		                                    <input type="text" class="form-control" value="03/04/2014">
+		                                   	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+		                                </div>
+		                            </div>  
+									
+									<div class="form-group col-sm-2 col-md-3 col-lg-2 data_1">
+									  	<label class="font-noraml">执行期限：</label>
+									    <div class="input-group date">
+		                                    <input type="text" class="form-control" value="03/04/2014">
+		                                    <span class="input-group-addon">
+		                                    	<i class="fa fa-calendar"></i>
+		                                    </span>
+		                                </div>
+									</div> 
+									
+									<div class="form-group col-sm-2 col-md-2 col-lg-1">
+										<label >工作日：</label>
+										<div class="input-group">
+											<input type="text" class="form-control">
+											<span class="input-group-addon">天</span>
+										</div>
+									</div>
+									
+									<div class="form-group col-sm-2">
+									  	<label>加急类型：</label>
+									    <select class="form-control" name="warningType" id="">
+									    	<option value="normal">普通</option>
+									    	<option value="150">150%</option>
+									    	<option value="200">200%</option>
+									    </select>
+									</div>
+									
+									<div class="form-group col-sm-2">
+										<label>紧急类型：</label>
+										<div class="i-checks">
+										    <label class="m-t-checkbox checkbox-inline i-checks"> 
+										    	<div class="icheckbox_square-green">
+										    		<input type="checkbox" class="i-checks" >
+										    		<ins class="iCheck-helper" ></ins>
+										    	</div>
+										    		 紧急 
+										    </label>
+									    </div>	
+									</div>
+									
+								  </div>
+							</div>
+						</div>
+		           </div>
+	        	</div>
+	        	<!--客户信息-->
+				<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;客户信息</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+		                    		<a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content">
+		                          <div class="row">
+			                          <div class="form-group col-sm-4">
+									    <label for="weituo">委托方：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">唯美血液技术医疗器材(上海)国际贸易有限公司</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-6">
+									    <label for="address">地址：</label>
+									    <input class="form-control" id="address" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="zipCode">邮编：</label>
+									    <input class="form-control" type="text" id="zipCode">
+									  </div>
+								  </div>
+								  <div class="row">
+			                          <div class="form-group col-sm-4">
+									    <label for="weituo">被检单位：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">唯美血液技术医疗器材(上海)国际贸易有限公司</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-6">
+									    <label for="address">地址：</label>
+									    <input class="form-control" id="address" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="zipCode2">邮编：</label>
+									    <input class="form-control" type="text" id="zipCode2">
+									  </div>
+								  </div>
+								  <div class="row">
+			                          <div class="form-group col-sm-4">
+									    <label for="weituo">制造单位：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">唯美血液技术医疗器材(上海)国际贸易有限公司</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-6">
+									    <label for="address">地址：</label>
+									    <input class="form-control" id="address" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="zipCode3">邮编：</label>
+									    <input class="form-control" type="text" id="zipCode3">
+									  </div>
+								  </div>
+								  <div class="row">
+			                          <div class="form-group col-sm-2 col-md-2 col-lg-1">
+									    <label for="user">联系人：</label>
+									    <select class="form-control" name="user" id="">
+									    	<option value="zs">张三</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-4 col-md-3 col-lg-3">
+									    <label for="card">身份证：</label>
+									    <input class="form-control" id="card" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-3 col-lg-2">
+									    <label for="mobile">手机：</label>
+									    <input class="form-control" type="text" id="mobile">
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-3 col-lg-2">
+									    <label for="text">电话：</label>
+									    <input class="form-control" type="text" id="number">
+									  </div>
+									  
+									  <div class="form-group col-sm-4 col-md-3 col-lg-2">
+									    <label for="email">电子邮件：</label>
+									    <input class="form-control" type="text" id="email">
+									  </div>
+								  </div>
+							</div>
+						</div>
+		            </div>
+	        	</div>
+        		<!--样品信息-->
+				<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;样品信息</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+			                        <a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+			                       
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content ">
+		                          <div class="row">
+		                          	  <div class="form-group col-sm-4 col-lg-2">
+									    <label for="">样品名称：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">combobox</option>
+									    </select>
+									  </div>
+									  
+			                          <div class="form-group col-sm-4 col-lg-2">
+									    <label for="weituo">样品编号：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-4 col-lg-2">
+									    <label for="">原样品编号：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-4 col-lg-2">
+									    <label for="">型号规格/批号：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-2 col-md-2 col-lg-1">
+									    <label for="">数量：</label>
+									    <div class="input-group">
+											<input type="text" class="form-control">
+											<span class="input-group-addon">个</span>
+										</div>	
+									  </div>
+									  
+									  <div class="form-group col-sm-4 col-lg-2">
+									    <label for="">状态：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">combobox</option>
+									    </select>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="form-group col-sm-6 col-lg-6">
+									    <label for="">单位：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">启明软件</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-6 col-lg-3">
+									    <label for="">商标：</label>
+									    <input class="form-control" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-2 col-lg-2 data_1">
+									    <label class="font-noraml">生产日期：</label>
+									    <div class="input-group date">
+		                                    <input type="text" class="form-control" value="03/04/2014">
+		                                    <span class="input-group-addon">
+		                                    	<i class="fa fa-calendar"></i>
+		                                    </span>
+		                                </div>
+									  </div>
+									  
+								  </div>
+								  <div class="row">
+									  
+									  <div class="form-group col-sm-4 col-md-3 col-lg-2">
+									    <label for="">样品处置/储存条件：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">有特殊条件</option>
+									    	<option value="">无特殊条件</option>
+									    </select>
+									  </div>
+									  
+									   <div class="form-group col-sm-3 col-md-2 col-lg-2">
+									    <label for="" class="">检后处理方式：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">归还</option>
+									    	<option value="">没收</option>
+									    	<option value="">摧毁</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-2 col-lg-2">
+									    <label for="">来样方式：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">抽样</option>
+									    	<option value="">送样</option>
+									    	<option value="">邮寄</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-3 col-lg-1">
+									    <label >检后保存时间：</label>
+										<div class="input-group">
+											<input type="text" class="form-control">
+											<span class="input-group-addon">天</span>
+										</div>
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-2 col-lg-1">
+									    <label >温度：</label>
+									    <div class="input-group">
+											<input type="text" class="form-control">
+											<span class="input-group-addon">°C</span>
+										</div>
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-2 col-lg-1">
+									    <label >湿度：</label>
+									    <div class="input-group">
+											<input type="text" class="form-control">
+											<span class="input-group-addon p-l-3 p-r-3">%RH</span>
+										</div>
+									  </div>
+									  
+								  </div>
+							</div>
+						</div>
+		            </div>
+	        	</div>
+    			<!--检测信息-->
+				<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;检测信息</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+			                        <a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+			                        
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content ">
+		                          <div class="row">
+			                          <div class="form-group col-sm-3">
+									    <label for="weituo">主检部门：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">检查一室</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-9">
+									    <label for="77">检查依据：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+								  </div>
+								  <div class="row">
+			                          <div class="form-group col-sm-3">
+									    <label for="weituo">检验方式：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">标准</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-9">
+									    <label for="">检查项目：</label>
+									    <select class="form-control" name="yp" id="">
+									    	<option value="sh">combobox</option>
+									    </select>
+									  </div>
+								  </div>
+								  <div class="row">
+								  	  <div class="col-sm-12">
+								  	  	<label class="control-label" for="">委托方资料：</label>
+								  	  </div>
+			                          <div class="form-group col-sm-12 col-lg-12 ">
+			                          		<label class="checkbox-inline i-checks">
+			                          			<div class="icheckbox_square-green">
+			                          				<input type="checkbox" value="option1" >
+			                          				<ins class="iCheck-helper" ></ins>
+			                          			</div>
+			                          			标准 
+			                          		</label>
+											<label class="checkbox-inline i-checks">
+												<div class="icheckbox_square-green">
+												    <input type="checkbox" value="option1" >
+												    <ins class="iCheck-helper"></ins>
+												</div>
+												说明书
+											</label>
+											<label class="checkbox-inline i-checks">
+												<div class="icheckbox_square-green">
+												    <input type="checkbox" value="option1" >
+												    <ins class="iCheck-helper" ></ins>
+												</div>
+												关键元器件清单 
+											</label>
+											<label class="checkbox-inline i-checks">
+												<div class="icheckbox_square-green">
+												    <input type="checkbox" value="option1" >
+												    <ins class="iCheck-helper" ></ins>
+												</div>
+												安全认证证书 </label>
+											<label class="checkbox-inline i-checks m-r-sm"> 
+												<div class="icheckbox_square-green">
+												    <input type="checkbox" value="option1" >
+												    <ins class="iCheck-helper" ></ins>
+												</div>
+												电路图 
+											</label>
+											<span>其他：</span>
+											<div class="inline w-300">
+												<input type="text" class="form-control">
+											</div>
+									  </div>
+								  </div>
+								  <div class="row">
+			                          <div class="form-group col-sm-2">
+									    <label for="" class="">检查类别：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">委托检查</option>
+									    	<option value="">进口注册检查</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="">报告结论：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">结论单</option>
+									    	<option value="">送样</option>
+									    	<option value="">邮寄</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="">报告获取方式：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">自取</option>
+									    	<option value="">本部</option>
+									    	<option value="">邮寄</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-2">
+									    <label for="">样品取回方式：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">自取</option>
+									    	<option value="">本部</option>
+									    	<option value="">邮寄</option>
+									    </select>
+									  </div>
+									  <div class="form-group col-sm-2">
+									    <label for="" class="text-danger">是否需要CMTC：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">需要</option>
+									    	<option value="">不需要</option>
+									    </select>
+									  </div>
+									  
+									  <div class="form-group col-sm-2 ">
+									    <label for="">出现不合格项是否继续检测：</label>
+									    <select class="form-control" name="" id="">
+									    	<option value="">继续</option>
+									    	<option value="">终止</option>
+									    </select>
+									  </div>
+								  </div>
+								   
+							</div>
+						</div>
+		            </div>
+	        	</div>
+    			<!--抽样信息-->
+				<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;抽样信息</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+			                        <a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+			                        
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content ">
+		                          <div class="row">
+			                          <div class="form-group col-sm-3 col-md-2">
+									    <label for="">抽样单编号：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-2">
+									    <label for="">原报告编号：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-lg-2 data_1">
+									    <label class="font-noraml">抽样日期：</label>
+									    <div class="input-group date">
+		                                    <input type="text" class="form-control" value="03/04/2014">
+		                                    <span class="input-group-addon">
+		                                    	<i class="fa fa-calendar"></i>
+		                                    </span>
+		                                </div>
+									  </div>
+									  
+									  <div class="form-group col-sm-3 col-md-1">
+									    <label for="">抽样基数：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+								  </div>
+								  <div class="row">
+								  	  <div class="form-group col-sm-6">
+									    <label for="">抽样地点：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+									  <div class="form-group col-sm-6">
+									    <label for="">抽样单位：</label>
+									    <input class="form-control" id="" type="text">
+									  </div>
+									  
+								  </div>
+							</div>
+						</div>
+		            </div>
+	        	</div>
+    			<!--其他-->
+				<div class="row">
+	        		<div class="col-sm-12">
+		                <div class="ibox float-e-margins">
+		                    <div class="ibox-title">
+		                    	<h5><i class="fa fa-bookmark b-g-c"></i>&nbsp;&nbsp;其他</h5>
+		                    	<div class="ibox-tools">
+		                    		<a class="fullscreen-link" >
+			                        	<i class="fa fa-expand"></i>
+			                        </a>
+			                        <a class="collapse-link">
+			                            <i class="fa fa-chevron-up"></i>
+			                        </a>
+			                        
+		                        </div>
+		                   	</div>
+		                    <div class="ibox-content ">
+		                          <div class="row">
+			                          <div class="form-group col-sm-12">
+									    <label for="">备注：</label>
+									    <textarea class="form-control" name="" rows="" cols=""></textarea>
+									  </div>
+								  </div>
+							</div>
+						</div>
+		            </div>
+	        	</div>
+    			<!--提交-->
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<div class="ibox float-e-margins">
+    						<div class="ibox-footer">
+    							<button type="button" class="btn btn-danger delete"><i class="fa fa-close"></i>&nbsp;删除</button>
+			    				<button type="button" class="btn btn-primary save"><i class="fa fa-save"></i>&nbsp;保存</button>
+			    				<!--<button type="button" class="btn btn-success"><i class="fa fa-file-o"></i>&nbsp;预报价</button>-->
+			    				<button type="submit" class="btn btn-success" formaction="contract_panel.html"><i class="fa fa-file-o"></i>&nbsp;预报价</button>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</form>
+        </div>
+        <div class="footer" >
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2017
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Date range use moment.js same as full calendar plugin -->
+<script src="js/plugins/moment/moment.min.js"></script>
+
+<!-- Date range picker -->
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+<!-- Toastr -->
+<script src="js/plugins/toastr/toastr.min.js"></script>
+
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+	        $('.i-checks').iCheck({
+	            checkboxClass: 'icheckbox_square-green',
+	            radioClass: 'iradio_square-green',
+	        });
+	        
+	        $('.data_1 .input-group.date').datepicker({
+	            todayBtn: "linked",
+	            keyboardNavigation: false,
+	            forceParse: false,
+	            calendarWeeks: true,
+	            autoclose: true
+	        });
+	        
+	        
+	        $('.save').click(function(){
+	        	setTimeout(function() {
+			        toastr.options = {
+			           	closeButton: true,
+			            progressBar: true,
+			            showMethod: 'slideDown',
+			            timeOut: 4000
+			    	};
+		        	toastr.success('保存成功','处理完成');
+		    	}, 1300);
+	        });
+	        
+	        $('.delete').click(function () {
+            	swal({
+                    title: "确定要删除吗?",
+                    text: "",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "是的",
+                    cancelButtonText: "不",
+                    closeOnConfirm: false,
+                    closeOnCancel: false },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("删除成功", "", "success");
+                    } else {
+                        swal("取消删除", "", "error");
+                    }
+                });
+        	});
+        });
+        
+        
+    </script>
+</body>
+
+</html>
